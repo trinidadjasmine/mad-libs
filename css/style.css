@@ -1,0 +1,233 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	color: black;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+#help, #invis-flex, .user-input input, .user-input label {font-size: 20px;}
+
+#help, #madlibs, #story-container {
+	border: 4px solid black;
+	background-color: aquamarine;
+	border-radius: 2em;
+}
+
+/* HEADER */
+
+header {text-align: center;}
+
+#welcome, #form-instructions {padding: 1em;}
+
+#welcome {
+	text-decoration: underline;
+	padding-bottom: 0;
+}
+
+/* MAIN */
+
+/* creating flex containers for the page */
+#main-container, #form-flex-container {display: flex;}
+
+/* SECTION - HELP - MAIN FLEX ITEM*/ 
+
+#help {
+	width: 20%;
+	padding: 1.5em;
+	margin: 4em 4em;
+}
+
+#help h3 {
+	text-align: center;
+	margin-bottom: .5em;
+}
+
+ul li {padding: .5em;}
+
+ul li span {font-weight: bold}
+
+/* SECTION - MADLIBS FORM - MAIN FLEX ITEM */
+
+#madlibs {
+	width: 50%;
+	margin: 0 auto;
+}
+
+/* SECTION - MAIN FLEX ITEM */
+
+/* an "invisible" flex item used in #main-container */
+#invis-flex {
+	border: 4px solid white;
+	border-radius: 2em;
+	width: 20%;
+	padding: 1.5em;
+	margin: 4em 4em;
+}
+
+/* SECTION - MADLIBS - FORM FLEX CONTAINER */
+
+#form-flex-container {padding: 2em;}
+
+/* MADLIBS FLEX ITEMS */ 
+
+.user-input {
+	width: 50%;
+	text-align: center;
+}
+
+.user-input input {
+	padding: .25em;
+	margin: 1em 0;
+}
+
+/* BUTTONS */
+
+#form-buttons {
+	width: 25%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+#form-buttons input, #rand-button button {
+	cursor: pointer;
+	border: 1px solid aquamarine;
+	background-color: aquamarine;
+	color: black;
+	border-radius: 2em;
+	padding: .5em;
+	font-size: 22px;
+}
+
+#rand-button {margin: 1em 0 2em;}
+
+/* HOVER EFFECTS */
+
+#form-buttons input:hover, #rand-button button:hover {
+	border: 1px solid black;
+	background-color: black;
+	color: aquamarine;
+}
+
+/* SECTION - STORY */
+
+#story {text-align: center;}
+
+#story h2 {padding: 1em;}
+
+#story-container {
+	width: 47%;
+	margin: 0 auto;
+	padding: 1.5em;
+	font-size: 24px;
+	line-height: 1.5em;
+}
+
+/* DISPLAY */
+
+/* hiding the story container on page load and then using javascript to display it */
+.hide {display: none;}
+
+.show {display: initial;}
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1825px) {
+
+	#form-flex-container {padding: 2em 1em;}
+	
+	#help, #invis-flex {
+		padding: 1em;
+		height: 11em;
+	}
+	
+	#form-buttons input, #rand-button button {
+		padding: .5em;
+		font-size: 20px;
+	}
+
+	#rand-button {margin: 1em 0 2em;}
+	
+	#help, #invis-flex, .user-input input, .user-input label {font-size: 18px;}
+
+	#form-buttons input, #rand-button button {font-size: 20px;}
+	
+	#story-container {
+		width: 47%;
+		font-size: 20px;
+	}
+}
+
+@media screen and (max-width: 1650px) {
+	
+	#welcome {font-size: 32px;}
+	
+	#form-instructions {font-size: 22px;}
+	
+	#story h2 {font-size: 22px;}
+	
+	#help, #invis-flex, .user-input input, .user-input label {font-size: 17px;}
+
+	#form-buttons input, #rand-button button {font-size: 19px;}
+	
+	#story-container {
+		width: 47%;
+		font-size: 19px;
+	}
+}
+
+@media screen and (max-width: 1565px) {
+	
+	#welcome {font-size: 40px;}
+	
+	#form-instructions, #story-header {font-size: 22px;}
+	
+	#main-container {flex-direction: column;}
+	
+	#invis-flex {display: none}
+	
+	#help {
+		margin: 0 auto 1em; 
+		width: 50%; 
+	}
+	
+	#form-flex-container {flex-direction: column; padding: 2em 0}
+	
+	#help, #invis-flex, .user-input input, .user-input label {font-size: 20px;}
+	
+	.user-input {margin: 0 auto; width: 50%;}
+	
+	#welcome {font-size: 30px;}
+	
+	#form-instructions {font-size: 21px;}
+	
+	#story-container {
+		width: 50%;
+		font-size: 19px;
+		margin: 0 auto 2em;
+	}
+}
+
+@media screen and (max-width: 1100px) {
+	
+	* {margin: 0;}
+	
+	#welcome {font-size: 32px;}
+	
+	#help, #madlibs, #story-container {width: 90%;}
+	
+	#help, #invis-flex, .user-input input, .user-input label {font-size: 22px;}
+	
+	#form-buttons input, #rand-button button {font-size: 22px;}
+	
+	#form-instructions, #story-header, #story-container, #story h2 {font-size: 24px;}
+}
+
+@media screen and (max-width: 500px) { 
+	#form-instructions {display: none;}
+	#welcome {margin-bottom: 1em;}
+	#help, #madlibs, #story-container {width: 95%;}
+	#help, #invis-flex, .user-input input, .user-input label {font-size: 14px;}
+	#form-buttons input, #rand-button button {font-size: 18px;}
+}

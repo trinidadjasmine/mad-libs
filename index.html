@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<title>Mad Libs</title>
+		<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script src="js/script.js" defer></script>
+	</head>
+	
+	<body>
+		<header>
+			<h1 id="welcome">Mad Libs!</h1>
+			<h2 id="form-instructions">Enter the following nouns, verbs, and adjectives to generate your story.</h2>
+		</header>
+		<main>
+			<div id="main-container">
+				<section id="help">
+					<div>
+						<h3>Need some help?</h3>
+						<ul>
+							<li><span>Noun</span>: A person, place, thing, idea.</li>
+							<li><span>Verb</span>: An action.</li>
+							<li><span>Adjective</span>: A descriptive word.</li>
+						</ul>
+					</div>
+				</section>
+				<section id="madlibs">
+					<form id="formData">
+						<div id="form-flex-container">
+							<div class="user-input">
+								<label for="first-noun">Enter a noun (thing):</label>
+								<input class="true" id="noun1" name="first-noun" type="text"><br>
+								<label for="second-noun">Enter another noun (place):</label><br>
+								<input class="true" id="noun2" name="second-noun" type="text">
+							</div>
+							<div class="user-input">
+								<label for="first-verb">Enter a present-tense verb:</label>
+								<input id="verb1" name="first-verb" type="text"><br>
+								<label for="second-verb">Enter a past-tense verb:</label><br>
+								<input id="verb2" name="second-verb" type="text">
+							</div>
+							<div class="user-input">
+								<label for="first-adj">Enter an adjective:</label>
+								<input id="adj1" name="first-adj" type="text"><br>
+								<label for="second-adj">Enter another adjective:</label><br>
+								<input id="adj2" name="second-adj" type="text">
+							</div>
+						</div>
+						<div id="form-buttons">
+							<input id="submitGame" name="form" type="submit"></input>
+							<input id="clearForm" name="form" type="reset" value="Clear"></input>
+							<div id="rand-button">
+								<button id="randStory">Randomize</button>
+							</div>
+						</div>
+					</form>
+				</section>
+				<section id="invis-flex"></section>
+			</div>
+			<section id="story" class="hide">
+					<h2>Your Mad Libs:</h2>
+					<div id="story-container">
+						<p id="madlibs-story"></p>
+					</div>
+			</section>
+		</main>
+	</body>
+	
+</html>
